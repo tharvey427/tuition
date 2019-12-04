@@ -1,0 +1,16 @@
+#version: '3'
+#
+#services:
+#
+#  my-sql-practice:
+#    image: mysql:8.0.17
+#    environment:
+#      MYSQL_ROOT_PASSWORD: Positive101
+#      MYSQL_DATABASE: mmtr
+#    ports:
+#      - "3308:3306"
+#
+##    admin:
+##      image: adminer
+##      ports:
+##        - "8080:8080"
