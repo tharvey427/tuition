@@ -1,0 +1,19 @@
+<p>employee works!</p>
+<table>
+    <thead>
+        <th scope="col">Employee ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Department</th>
+        <th scope="col">Username</th>
+        <th scope="col">Password</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of employees">
+            <td>{{e.employeeid}}</td>
+            <td>{{e.first}}</td>
+            <td>{{e.departmentid}}</td>
+            <td>{{e.username}}</td>
+            <td>{{e.password}}</td>
+        </tr>
+    </tbody>
+</table>
