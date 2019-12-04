@@ -26,7 +26,8 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(String first, String last, String username, String password, Integer supervisorid, Integer departmentId, Department department) {
+    public Employee(Integer employeeid, String first, String last, String username, String password, Integer supervisorid, Integer departmentId, Department department) {
+        this.employeeid = employeeid;
         this.first = first;
         this.last = last;
         this.username = username;
@@ -36,7 +37,13 @@ public class Employee {
         this.department = department;
     }
 
+    public Integer getEmployeeid() {
+        return employeeid;
+    }
 
+    public void setEmployeeid(Integer employeeid) {
+        this.employeeid = employeeid;
+    }
 
     public String getFirst() {
         return first;
