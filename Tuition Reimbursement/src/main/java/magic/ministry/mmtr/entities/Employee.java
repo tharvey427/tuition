@@ -15,25 +15,21 @@ public class Employee {
     private String password;
     private Integer supervisorid;
 
-//    @Column(name = "department_id")
-//    private Integer departmentId;
-
-    //            (fetch = FetchType.LAZY)
+    // Multiple employees can be in one department
     @ManyToOne
-    @JoinColumn(name = "fk_emp_dept")
-    private Department department;
+    @JoinColumn(name = "department_id") //the name of the foreign key column in table
+    private Department department; // using an object instead of just an integer to have all associated content
 
     public Employee() {
     }
 
-    public Employee(Integer employeeid, String first, String last, String username, String password, Integer supervisorid, Integer departmentId, Department department) {
+    public Employee(Integer employeeid, String first, String last, String username, String password, Integer supervisorid, Department department) {
         this.employeeid = employeeid;
         this.first = first;
         this.last = last;
         this.username = username;
         this.password = password;
         this.supervisorid = supervisorid;
-//        this.departmentId = departmentId;
         this.department = department;
     }
 
@@ -84,14 +80,6 @@ public class Employee {
     public void setsupervisorid(Integer supervisorid) {
         this.supervisorid = supervisorid;
     }
-
-//    public Integer getdepartmentId() {
-//        return departmentId;
-//    }
-//
-//    public void setdepartmentId(Integer departmentId) {
-//        this.departmentId = departmentId;
-//    }
 
     public Department getDepartment() {
         return department;

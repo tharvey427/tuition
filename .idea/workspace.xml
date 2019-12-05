@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b3373e1-5839-4089-8512-56e895b0cd65" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/controllers/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/controllers/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/entities/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/entities/Employee.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,7 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1575151279628</updated>
       <workItem from="1575151283865" duration="1304000" />
-      <workItem from="1575211152919" duration="22590000" />
+      <workItem from="1575211152919" duration="27030000" />
     </task>
     <servers />
   </component>
