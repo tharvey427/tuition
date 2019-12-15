@@ -179,8 +179,8 @@ insert into employee(first_name, last_name, username, password, supervisor_id)
 values('Rowena', 'Ravenclaw', 'raven', 'claw', 4);
 insert into employee(first_name, last_name, username, password, supervisor_id) 
 values('Sybill', 'Trelawney', 'syb', 'lawn', 4);
-insert into employee(first_name, last_name, username, password) 
-values('Filius', 'Flitwick', 'flit', 'wick');
+insert into employee(first_name, last_name, username, password, supervisor_id) 
+values('Filius', 'Flitwick', 'flit', 'wick', 2);
 
 insert into department(department_name, department_head) 
 values('International Magical Cooperation', 1);

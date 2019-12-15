@@ -4,10 +4,12 @@ import magic.ministry.mmtr.entities.Department;
 import magic.ministry.mmtr.entities.Employee;
 import magic.ministry.mmtr.repositories.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import java.util.*;
 
+@Service
 public class EmployeeImpl implements EmployeeService {
 
     @Autowired
@@ -32,8 +34,8 @@ public class EmployeeImpl implements EmployeeService {
     @Override
     public Set<Employee> getAllEmployees() {
         Set<Employee> employees= new HashSet<>();
-        er.findAll();
-//        er.findAll().forEach(employees::add);
+        er.findAll().forEach(employees::add);
+        // apparently the for each part is what actually adds each employee to set, needed
         return employees;
     }
 

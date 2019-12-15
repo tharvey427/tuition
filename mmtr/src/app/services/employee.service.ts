@@ -10,7 +10,12 @@ import { EndpointsService } from '../constants/endpoints.service';
 export class EmployeeService {
 
   constructor(private http: HttpClient, private endpoints: EndpointsService) { }
+
   getAllEmployees(): Observable<Employee[]> {
     return this.http.get<Employee[]>(this.endpoints.getAllEmployees);
+  }
+
+  getEmployee(): Observable<Employee> {
+    return this.http.get<Employee>(this.endpoints.getEmployee);
   }
 }

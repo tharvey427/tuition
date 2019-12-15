@@ -11,15 +11,15 @@
     <tbody>
         <tr *ngFor="let e of employees">
             <td>{{e.employeeId}}</td>
-            <td>{{e.first}}</td>
+            <td>{{e.first}} {{e.last}}</td>
             <td>{{e.username}}</td>
             <!-- <td>{{e.password}}</td> -->
             <!-- edit department to show specific department elements -->
-            <td>{{e.supervisor | json }}</td>
-            <!-- <td>{{e.supervisor.employeeId}}</td> -->
+            <!-- <td>{{e.supervisor | json }}</td> -->
+            <td>{{e.supervisor?.first}} {{e.supervisor?.last}}</td>
             <!-- edit department to show specific department elements -->
-            <!-- <td>{{e.department.departmentName}}</td> -->
-            <td>{{e.department | json}}</td>
+            <td>{{e.department.departmentName}}</td>
+            <!-- <td>{{e.department | json}}</td> -->
         </tr>
     </tbody>
 </table>

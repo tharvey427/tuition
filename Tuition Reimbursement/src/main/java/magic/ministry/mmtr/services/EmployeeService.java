@@ -6,6 +6,7 @@ import magic.ministry.mmtr.entities.Employee;
 import java.util.Map;
 import java.util.Set;
 
+
 public interface EmployeeService {
 
     public Employee newEmployee(Employee employee);
