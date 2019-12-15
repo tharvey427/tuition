@@ -7,6 +7,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmployeeComponent } from './components/employees/employee/employee.component';
 import { EndpointsService } from './constants/endpoints.service';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ModalModule } from 'ngx-bootstrap/modal';
+// import { AppBootstrapModule } from './app-bootstrap/app-bootstrap.module';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -18,8 +23,17 @@ import { EndpointsService } from './constants/endpoints.service';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    BrowserModule,
     ToastrModule.forRoot(),
+    BsDropdownModule.forRoot(),
+    TooltipModule.forRoot(),
+    ModalModule.forRoot()
   ],
+  exports:
+    [BsDropdownModule,
+      TooltipModule,
+      ModalModule
+    ],
   providers: [
     EndpointsService
   ],

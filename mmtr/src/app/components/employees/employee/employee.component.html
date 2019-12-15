@@ -1,19 +1,25 @@
 <p>employee works!</p>
-<table>
-    <thead>
+<table id="employees" class="table">
+    <thead class="thead-dark">
         <th scope="col">Employee ID</th>
         <th scope="col">Name</th>
-        <th scope="col">Department</th>
         <th scope="col">Username</th>
-        <th scope="col">Password</th>
+        <!-- <th scope="col">Password</th> -->
+        <th scope="col">Supervisor</th>
+        <th scope="col">Department</th>
     </thead>
     <tbody>
         <tr *ngFor="let e of employees">
-            <td>{{e.employeeid}}</td>
+            <td>{{e.employeeId}}</td>
             <td>{{e.first}}</td>
-            <td>{{e.departmentid}}</td>
             <td>{{e.username}}</td>
-            <td>{{e.password}}</td>
+            <!-- <td>{{e.password}}</td> -->
+            <!-- edit department to show specific department elements -->
+            <td>{{e.supervisor | json }}</td>
+            <!-- <td>{{e.supervisor.employeeId}}</td> -->
+            <!-- edit department to show specific department elements -->
+            <!-- <td>{{e.department.departmentName}}</td> -->
+            <td>{{e.department | json}}</td>
         </tr>
     </tbody>
 </table>

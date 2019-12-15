@@ -7,13 +7,21 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer employeeid;
+    @Column(name = "employee_id")
+    private Integer employeeId;
 
+    @Column(name = "first_name")
     private String first;
+
+    @Column(name = "last_name")
     private String last;
+
     private String username;
     private String password;
-    private Integer supervisorid;
+
+    @ManyToOne
+    @JoinColumn(name = "supervisor_id")
+    private Employee supervisor;
 
     // Multiple employees can be in one department
     @ManyToOne
@@ -23,22 +31,30 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(Integer employeeid, String first, String last, String username, String password, Integer supervisorid, Department department) {
-        this.employeeid = employeeid;
+    public Employee(Integer employeeId, String first, String last, String username, String password, Employee supervisor, Department department) {
+        this.employeeId = employeeId;
         this.first = first;
         this.last = last;
         this.username = username;
         this.password = password;
-        this.supervisorid = supervisorid;
+        this.supervisor = supervisor;
         this.department = department;
     }
 
-    public Integer getEmployeeid() {
-        return employeeid;
+    public Employee getSupervisor() {
+        return supervisor;
     }
 
-    public void setEmployeeid(Integer employeeid) {
-        this.employeeid = employeeid;
+    public void setSupervisor(Employee supervisor) {
+        this.supervisor = supervisor;
+    }
+
+    public Integer getEmployeeId() {
+        return employeeId;
+    }
+
+    public void setEmployeeId(Integer employeeId) {
+        this.employeeId = employeeId;
     }
 
     public String getFirst() {
@@ -71,14 +87,6 @@ public class Employee {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public Integer getsupervisorid() {
-        return supervisorid;
-    }
-
-    public void setsupervisorid(Integer supervisorid) {
-        this.supervisorid = supervisorid;
     }
 
     public Department getDepartment() {
