@@ -21,7 +21,7 @@ public class EmployeeDetailsService implements UserDetailsService {
     EmployeeRepository er;
 
     @Override
-//    @Transactional(readOnly = true)
+    @Transactional
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Employee employee = er.findByUsername(username);
         if(employee == null) {
