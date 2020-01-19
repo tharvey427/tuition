@@ -10,6 +10,8 @@ import java.util.Set;
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
+    Employee findByUsername (String username);
+
     Set<Employee> findByDepartment(Department department);
 
     Set<Employee> findBySupervisor(Employee supervisor);

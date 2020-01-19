@@ -43,7 +43,28 @@ create table employee (
     index(department_id),
     index(supervisor_id),
     primary key (employee_id));
+  
+create table role (
+	role_id int not null auto_increment,
+    role_name varchar(20),
+    primary key (role_id));
     
+create table emp_role (
+	emp_role_id int not null auto_increment,
+    employee_id int,
+    role_id int,
+    constraint fk_role_emp
+		foreign key (employee_id)
+        references employee(employee_id)
+			on update cascade
+			on delete cascade,
+	constraint fk_role_role
+		foreign key (role_id)
+        references role(role_id)
+			on update cascade
+            on delete cascade,
+	primary key (emp_role_id));
+
 create table department (
 	department_id int not null auto_increment,
     department_name varchar(50) not null,
@@ -181,6 +202,19 @@ insert into employee(first_name, last_name, username, password, supervisor_id)
 values('Sybill', 'Trelawney', 'syb', 'lawn', 4);
 insert into employee(first_name, last_name, username, password, supervisor_id) 
 values('Filius', 'Flitwick', 'flit', 'wick', 2);
+
+insert into role(role_name) values('Employee');
+insert into role(role_name) values('Supervisor');
+insert into role(role_name) values('Department Head');
+insert into role(role_name) values('BenCo');
+
+insert into emp_role(employee_id, role_id) values(1, 4);
+insert into emp_role(employee_id, role_id) values(2, 4);
+insert into emp_role(employee_id, role_id) values(3, 1);
+insert into emp_role(employee_id, role_id) values(4, 2);
+insert into emp_role(employee_id, role_id) values(5, 1);
+insert into emp_role(employee_id, role_id) values(6, 1);
+insert into emp_role(employee_id, role_id) values(7, 3);
 
 insert into department(department_name, department_head) 
 values('International Magical Cooperation', 1);
