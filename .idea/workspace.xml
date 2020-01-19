@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b3373e1-5839-4089-8512-56e895b0cd65" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/services/EmployeeDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/services/EmployeeDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/repositories/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/repositories/RoleRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +110,7 @@
       <workItem from="1577106763115" duration="4403000" />
       <workItem from="1577903398582" duration="4758000" />
       <workItem from="1579447917484" duration="661000" />
-      <workItem from="1579455356644" duration="613000" />
+      <workItem from="1579455356644" duration="1200000" />
     </task>
     <servers />
   </component>
