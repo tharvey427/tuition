@@ -2,33 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b3373e1-5839-4089-8512-56e895b0cd65" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_core_1_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_latencyutils_LatencyUtils_2_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_autoconfigure_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_test_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/entities/EmployeePrincipal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/entities/EmployeeRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/entities/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/repositories/RoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/security/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/services/EmployeeDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_2_1_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_2_2_1_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_11_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_11_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tuition Reimbursement/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tuition Reimbursement/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/repositories/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/repositories/EmployeeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tuition Reimbursement/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tuition Reimbursement/src/main/resources/mysql_mmtr.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/resources/mysql_mmtr.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/services/EmployeeDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/services/EmployeeDetailsService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,6 +110,8 @@
       <workItem from="1576845859590" duration="4033000" />
       <workItem from="1577106763115" duration="4403000" />
       <workItem from="1577903398582" duration="4758000" />
+      <workItem from="1579447917484" duration="661000" />
+      <workItem from="1579455356644" duration="613000" />
     </task>
     <servers />
   </component>
@@ -165,13 +142,18 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="0" y="29" key="#Assign_Data_Sources/0.0.1366.738@0.0.1366.738" timestamp="1577108558904" />
+    <state x="-1186" y="150" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579452906729">
+      <screen x="-1280" y="0" width="1280" height="994" />
+    </state>
+    <state x="-1186" y="150" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738/-1280.0.1280.994@-1280.0.1280.994" timestamp="1579452906729" />
     <state x="280" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1577975656591">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="280" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1577975656591" />
-    <state x="541" y="95" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1575999960511">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="-773" y="128" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1579452911657">
+      <screen x="-1280" y="0" width="1280" height="994" />
     </state>
+    <state x="-773" y="128" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.738/-1280.0.1280.994@-1280.0.1280.994" timestamp="1579452911657" />
     <state x="541" y="95" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.738@0.0.1366.738" timestamp="1575999960511" />
     <state x="20" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1577107977486">
       <screen x="0" y="0" width="1366" height="738" />
