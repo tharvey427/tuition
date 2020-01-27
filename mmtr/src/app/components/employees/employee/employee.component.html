@@ -1,10 +1,9 @@
-<p>employee works!</p>
+<!-- <p>employee works!</p> -->
 <table id="employees" class="table">
     <thead class="thead-dark">
         <th scope="col">Employee ID</th>
         <th scope="col">Name</th>
         <th scope="col">Username</th>
-        <!-- <th scope="col">Password</th> -->
         <th scope="col">Supervisor</th>
         <th scope="col">Department</th>
     </thead>
@@ -13,13 +12,8 @@
             <td>{{e.employeeId}}</td>
             <td>{{e.first}} {{e.last}}</td>
             <td>{{e.username}}</td>
-            <!-- <td>{{e.password}}</td> -->
-            <!-- edit department to show specific department elements -->
-            <!-- <td>{{e.supervisor | json }}</td> -->
             <td>{{e.supervisor?.first}} {{e.supervisor?.last}}</td>
-            <!-- edit department to show specific department elements -->
             <td>{{e.department.departmentName}}</td>
-            <!-- <td>{{e.department | json}}</td> -->
         </tr>
     </tbody>
 </table>

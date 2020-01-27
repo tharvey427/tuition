@@ -10,20 +10,28 @@ import { EndpointsService } from './constants/endpoints.service';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
+// import { AngularWebStorageModule } from 'angular-sessionstorage';
+import { AngularWebStorageModule } from 'angular-web-storage';
 // import { AppBootstrapModule } from './app-bootstrap/app-bootstrap.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    NavbarComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    HttpClientModule,
     FormsModule,
     BrowserModule,
+    AngularWebStorageModule,
     ToastrModule.forRoot(),
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),

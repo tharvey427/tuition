@@ -3,12 +3,12 @@ package magic.ministry.mmtr.entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "emp_role")
+@Table(name = "employee_role")
 public class EmployeeRole {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "emp_role_id")
+    @Column(name = "employee_role_id")
     private Integer id;
 
     @JoinColumn(name = "employee_id")

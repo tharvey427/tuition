@@ -1,0 +1,27 @@
+.box {
+    width: auto;
+    height: auto;
+    border: solid;
+}
+
+img {
+    width: 100%;
+    height: unset;
+}
+
+body {
+    background-image: url("/assets/mm-scene.jpg")!important;
+    // background-repeat: repeat;
+}
+
+h1 {
+    margin-bottom: 0!important;
+    font-family: inherit!important;
+    font-weight: 500!important;
+    line-height: 1.2!important;
+    color: inherit!important;
+    text-align: center!important;
+    background-color: bisque!important;
+    padding-bottom: 1rem!important;
+    padding-top: 1rem!important;
+}
