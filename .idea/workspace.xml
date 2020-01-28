@@ -2,32 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b3373e1-5839-4089-8512-56e895b0cd65" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/resources/img/mm-crest.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/resources/img/mm-scene.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/resources/lib/ojdbc7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/resources/oracle_mmtr_ddl.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_4_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_2_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_2_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_2_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_test_5_2_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_2_1_RELEASE.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/controllers/ClaimController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/controllers/EventController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/controllers/GradeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/entities/Claim.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/entities/Event.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/entities/Grade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/repositories/ClaimRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/repositories/EventRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/repositories/GradeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/services/ClaimImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/services/ClaimService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/services/DepartmentImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/services/DepartmentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/services/EventImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/services/EventService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/services/GradeImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/services/GradeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tuition Reimbursement/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tuition Reimbursement/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/entities/EmployeePrincipal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/entities/EmployeeRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/entities/EmployeeRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/repositories/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/repositories/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/security/WebSecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/services/EmployeeDetailsService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tuition Reimbursement/src/main/resources/Untitle.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/controllers/DepartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/controllers/DepartmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/controllers/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/controllers/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/entities/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/entities/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/entities/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/java/magic/ministry/mmtr/entities/Role.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tuition Reimbursement/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tuition Reimbursement/src/main/resources/oracle_mmtr.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/resources/oracle_mmtr.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tuition Reimbursement/src/main/resources/oracle_mmtr_ddl.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/resources/oracle_mmtr_ddl.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tuition Reimbursement/src/main/resources/oracle_mmtr_dml.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Tuition Reimbursement/src/main/resources/oracle_mmtr_dml.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mmtr/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/mmtr/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mmtr/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/mmtr/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmtr/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/mmtr/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmtr/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/mmtr/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mmtr/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/mmtr/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mmtr/src/app/components/employees/employee/employee.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/mmtr/src/app/components/employees/employee/employee.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmtr/src/app/models/department.ts" beforeDir="false" afterPath="$PROJECT_DIR$/mmtr/src/app/models/department.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +98,12 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.intentionPowerPack" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="magic.ministry.mmtr.entities" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="MmtrApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -281,6 +289,7 @@
       <workItem from="1579616275877" duration="11707000" />
       <workItem from="1579896383839" duration="11022000" />
       <workItem from="1579984625201" duration="1953000" />
+      <workItem from="1580096368249" duration="14262000" />
     </task>
     <servers />
   </component>
@@ -321,9 +330,11 @@
     <state x="-1186" y="150" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738/-1280.0.1280.994@-1280.0.1280.994" timestamp="1579616480015" />
     <state x="100" y="52" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738/-1280.0.1280.994@0.0.1366.738" timestamp="1579617724698" />
     <state x="100" y="45" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1579468170656" />
-    <state x="280" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1577975656591">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="-1018" y="108" key="#com.intellij.ide.util.MemberChooser" timestamp="1580178078157">
+      <screen x="-1280" y="0" width="1280" height="994" />
     </state>
+    <state x="-1018" y="108" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738/-1280.0.1280.994@-1280.0.1280.994" timestamp="1580178078157" />
+    <state x="280" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738/-1280.0.1280.994@0.0.1366.738" timestamp="1580168946102" />
     <state x="280" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1577975656591" />
     <state x="541" y="95" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1579984389185">
       <screen x="0" y="0" width="1366" height="738" />
@@ -343,65 +354,66 @@
     </state>
     <state x="-674" y="254" key="FileChooserDialogImpl/0.0.1366.738/-1280.0.1280.994@-1280.0.1280.994" timestamp="1579904388700" />
     <state x="647" y="189" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1579985661353" />
-    <state width="1171" height="376" key="GridCell.Tab.0.bottom" timestamp="1579981179265">
+    <state width="1236" height="364" key="GridCell.Tab.0.bottom" timestamp="1580179263146">
       <screen x="-1280" y="0" width="1280" height="994" />
     </state>
-    <state width="1171" height="376" key="GridCell.Tab.0.bottom/0.0.1366.738/-1280.0.1280.994@-1280.0.1280.994" timestamp="1579981179265" />
-    <state width="1322" height="292" key="GridCell.Tab.0.bottom/0.0.1366.738/-1280.0.1280.994@0.0.1366.738" timestamp="1579714778444" />
+    <state width="1236" height="364" key="GridCell.Tab.0.bottom/0.0.1366.738/-1280.0.1280.994@-1280.0.1280.994" timestamp="1580179263146" />
+    <state width="1230" height="283" key="GridCell.Tab.0.bottom/0.0.1366.738/-1280.0.1280.994@0.0.1366.738" timestamp="1580169045278" />
     <state width="637" height="178" key="GridCell.Tab.0.bottom/0.0.1366.738/-1366.0.1366.738@0.0.1366.738" timestamp="1576432940078" />
-    <state width="1322" height="292" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1579835993663" />
-    <state width="1171" height="376" key="GridCell.Tab.0.center" timestamp="1579981179265">
+    <state width="965" height="376" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580161836891" />
+    <state width="1236" height="364" key="GridCell.Tab.0.center" timestamp="1580179263145">
       <screen x="-1280" y="0" width="1280" height="994" />
     </state>
-    <state width="1171" height="376" key="GridCell.Tab.0.center/0.0.1366.738/-1280.0.1280.994@-1280.0.1280.994" timestamp="1579981179265" />
-    <state width="1322" height="292" key="GridCell.Tab.0.center/0.0.1366.738/-1280.0.1280.994@0.0.1366.738" timestamp="1579714778443" />
+    <state width="1236" height="364" key="GridCell.Tab.0.center/0.0.1366.738/-1280.0.1280.994@-1280.0.1280.994" timestamp="1580179263145" />
+    <state width="1230" height="283" key="GridCell.Tab.0.center/0.0.1366.738/-1280.0.1280.994@0.0.1366.738" timestamp="1580169045278" />
     <state width="637" height="178" key="GridCell.Tab.0.center/0.0.1366.738/-1366.0.1366.738@0.0.1366.738" timestamp="1576432940078" />
-    <state width="1322" height="292" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1579835993663" />
-    <state width="1171" height="376" key="GridCell.Tab.0.left" timestamp="1579981179264">
+    <state width="965" height="376" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1580161836890" />
+    <state width="1236" height="364" key="GridCell.Tab.0.left" timestamp="1580179263145">
       <screen x="-1280" y="0" width="1280" height="994" />
     </state>
-    <state width="1171" height="376" key="GridCell.Tab.0.left/0.0.1366.738/-1280.0.1280.994@-1280.0.1280.994" timestamp="1579981179264" />
-    <state width="1322" height="292" key="GridCell.Tab.0.left/0.0.1366.738/-1280.0.1280.994@0.0.1366.738" timestamp="1579714778443" />
+    <state width="1236" height="364" key="GridCell.Tab.0.left/0.0.1366.738/-1280.0.1280.994@-1280.0.1280.994" timestamp="1580179263145" />
+    <state width="1230" height="283" key="GridCell.Tab.0.left/0.0.1366.738/-1280.0.1280.994@0.0.1366.738" timestamp="1580169045278" />
     <state width="637" height="178" key="GridCell.Tab.0.left/0.0.1366.738/-1366.0.1366.738@0.0.1366.738" timestamp="1576432940078" />
-    <state width="1322" height="292" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1579835993663" />
-    <state width="1171" height="376" key="GridCell.Tab.0.right" timestamp="1579981179265">
+    <state width="965" height="376" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1580161836890" />
+    <state width="1236" height="364" key="GridCell.Tab.0.right" timestamp="1580179263145">
       <screen x="-1280" y="0" width="1280" height="994" />
     </state>
-    <state width="1171" height="376" key="GridCell.Tab.0.right/0.0.1366.738/-1280.0.1280.994@-1280.0.1280.994" timestamp="1579981179265" />
-    <state width="1322" height="292" key="GridCell.Tab.0.right/0.0.1366.738/-1280.0.1280.994@0.0.1366.738" timestamp="1579714778443" />
+    <state width="1236" height="364" key="GridCell.Tab.0.right/0.0.1366.738/-1280.0.1280.994@-1280.0.1280.994" timestamp="1580179263145" />
+    <state width="1230" height="283" key="GridCell.Tab.0.right/0.0.1366.738/-1280.0.1280.994@0.0.1366.738" timestamp="1580169045278" />
     <state width="637" height="178" key="GridCell.Tab.0.right/0.0.1366.738/-1366.0.1366.738@0.0.1366.738" timestamp="1576432940078" />
-    <state width="1322" height="292" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1579835993663" />
-    <state width="1171" height="376" key="GridCell.Tab.1.bottom" timestamp="1579981179266">
+    <state width="965" height="376" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1580161836891" />
+    <state width="1236" height="364" key="GridCell.Tab.1.bottom" timestamp="1580179263146">
       <screen x="-1280" y="0" width="1280" height="994" />
     </state>
-    <state width="1171" height="376" key="GridCell.Tab.1.bottom/0.0.1366.738/-1280.0.1280.994@-1280.0.1280.994" timestamp="1579981179266" />
-    <state width="1322" height="292" key="GridCell.Tab.1.bottom/0.0.1366.738/-1280.0.1280.994@0.0.1366.738" timestamp="1579714778444" />
+    <state width="1236" height="364" key="GridCell.Tab.1.bottom/0.0.1366.738/-1280.0.1280.994@-1280.0.1280.994" timestamp="1580179263146" />
+    <state width="1230" height="283" key="GridCell.Tab.1.bottom/0.0.1366.738/-1280.0.1280.994@0.0.1366.738" timestamp="1580169047870" />
     <state width="637" height="178" key="GridCell.Tab.1.bottom/0.0.1366.738/-1366.0.1366.738@0.0.1366.738" timestamp="1576432940079" />
-    <state width="1322" height="292" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1579835993663" />
-    <state width="1171" height="376" key="GridCell.Tab.1.center" timestamp="1579981179266">
+    <state width="965" height="376" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580161836892" />
+    <state width="1236" height="364" key="GridCell.Tab.1.center" timestamp="1580179263146">
       <screen x="-1280" y="0" width="1280" height="994" />
     </state>
-    <state width="1171" height="376" key="GridCell.Tab.1.center/0.0.1366.738/-1280.0.1280.994@-1280.0.1280.994" timestamp="1579981179266" />
-    <state width="1322" height="292" key="GridCell.Tab.1.center/0.0.1366.738/-1280.0.1280.994@0.0.1366.738" timestamp="1579714778444" />
+    <state width="1236" height="364" key="GridCell.Tab.1.center/0.0.1366.738/-1280.0.1280.994@-1280.0.1280.994" timestamp="1580179263146" />
+    <state width="1230" height="283" key="GridCell.Tab.1.center/0.0.1366.738/-1280.0.1280.994@0.0.1366.738" timestamp="1580169047870" />
     <state width="637" height="178" key="GridCell.Tab.1.center/0.0.1366.738/-1366.0.1366.738@0.0.1366.738" timestamp="1576432940079" />
-    <state width="1322" height="292" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1579835993663" />
-    <state width="1171" height="376" key="GridCell.Tab.1.left" timestamp="1579981179265">
+    <state width="965" height="376" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1580161836891" />
+    <state width="1236" height="364" key="GridCell.Tab.1.left" timestamp="1580179263146">
       <screen x="-1280" y="0" width="1280" height="994" />
     </state>
-    <state width="1171" height="376" key="GridCell.Tab.1.left/0.0.1366.738/-1280.0.1280.994@-1280.0.1280.994" timestamp="1579981179265" />
-    <state width="1322" height="292" key="GridCell.Tab.1.left/0.0.1366.738/-1280.0.1280.994@0.0.1366.738" timestamp="1579714778444" />
+    <state width="1236" height="364" key="GridCell.Tab.1.left/0.0.1366.738/-1280.0.1280.994@-1280.0.1280.994" timestamp="1580179263146" />
+    <state width="1230" height="283" key="GridCell.Tab.1.left/0.0.1366.738/-1280.0.1280.994@0.0.1366.738" timestamp="1580169047870" />
     <state width="637" height="178" key="GridCell.Tab.1.left/0.0.1366.738/-1366.0.1366.738@0.0.1366.738" timestamp="1576432940078" />
-    <state width="1322" height="292" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1579835993663" />
-    <state width="1171" height="376" key="GridCell.Tab.1.right" timestamp="1579981179266">
+    <state width="965" height="376" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1580161836891" />
+    <state width="1236" height="364" key="GridCell.Tab.1.right" timestamp="1580179263146">
       <screen x="-1280" y="0" width="1280" height="994" />
     </state>
-    <state width="1171" height="376" key="GridCell.Tab.1.right/0.0.1366.738/-1280.0.1280.994@-1280.0.1280.994" timestamp="1579981179266" />
-    <state width="1322" height="292" key="GridCell.Tab.1.right/0.0.1366.738/-1280.0.1280.994@0.0.1366.738" timestamp="1579714778444" />
+    <state width="1236" height="364" key="GridCell.Tab.1.right/0.0.1366.738/-1280.0.1280.994@-1280.0.1280.994" timestamp="1580179263146" />
+    <state width="1230" height="283" key="GridCell.Tab.1.right/0.0.1366.738/-1280.0.1280.994@0.0.1366.738" timestamp="1580169047870" />
     <state width="637" height="178" key="GridCell.Tab.1.right/0.0.1366.738/-1366.0.1366.738@0.0.1366.738" timestamp="1576432940079" />
-    <state width="1322" height="292" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1579835993663" />
-    <state x="0" y="0" key="SettingsEditor" timestamp="1576592467993">
+    <state width="965" height="376" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1580161836891" />
+    <state x="0" y="0" width="1127" height="738" key="SettingsEditor" timestamp="1580167575261">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
+    <state x="0" y="0" width="1127" height="738" key="SettingsEditor/0.0.1366.738/-1280.0.1280.994@0.0.1366.738" timestamp="1580167575261" />
     <state x="0" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1576592467993" />
   </component>
 </project>

@@ -26,7 +26,7 @@ public class EmployeeController {
         return es.getAllEmployees();
     }
 
-    @GetMapping(path = "/all")
+    @GetMapping(path = "/all") //this does the same as the emp service getEmployees method above
     public @ResponseBody Iterable<Employee> getAllEmployees() {
         return er.findAll();
     }
@@ -34,5 +34,10 @@ public class EmployeeController {
     @GetMapping(value = "{id}")
     public Employee getEmployee(@PathVariable Integer id) {
         return es.findEmployeeById(id);
+    }
+
+    @PostMapping(value = "/add")
+    public Employee addEmployee(@RequestBody Employee employee) {
+        return es.newEmployee(employee);
     }
 }

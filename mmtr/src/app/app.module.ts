@@ -11,18 +11,24 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 // import { AngularWebStorageModule } from 'angular-sessionstorage';
-import { AngularWebStorageModule } from 'angular-web-storage';
+// import { AngularWebStorageModule } from 'angular-web-storage';
 // import { AppBootstrapModule } from './app-bootstrap/app-bootstrap.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
+import { ClaimComponent } from './components/claim/claim.component';
+import { ViewClaimsComponent } from './components/view-claims/view-claims.component';
+import { AddClaimComponent } from './components/add-claim/add-claim.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    ClaimComponent,
+    ViewClaimsComponent,
+    AddClaimComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +37,7 @@ import { HomeComponent } from './components/home/home.component';
     HttpClientModule,
     FormsModule,
     BrowserModule,
-    AngularWebStorageModule,
+    // AngularWebStorageModule,
     ToastrModule.forRoot(),
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),

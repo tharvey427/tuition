@@ -3,6 +3,7 @@ package magic.ministry.mmtr.entities;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "role_type")
 public class Role {
 
     @Id

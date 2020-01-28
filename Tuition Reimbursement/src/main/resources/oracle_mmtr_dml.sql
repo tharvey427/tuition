@@ -16,25 +16,25 @@ insert into status values(4, 'Pending Document Upload');
 insert into status values(5, 'Approved');
 insert into status values(6, 'Denied');
 
-insert into employee(employee_id, first_name, last_name, username, password) 
+insert into employees(employee_id, first_name, last_name, username, password) 
 values(1, 'Hermoine', 'Granger', 'her', 'grange');
-insert into employee(employee_id, first_name, last_name, username, password) 
+insert into employees(employee_id, first_name, last_name, username, password) 
 values(2, 'Luna', 'Lovegood', 'loony', 'love');
-insert into employee(employee_id, first_name, last_name, username, password, supervisor_id) 
+insert into employees(employee_id, first_name, last_name, username, password, supervisor_id) 
 values(3, 'Dobby', 'Free Elf', 'dobby', 'socks', 1);
-insert into employee(employee_id, first_name, last_name, username, password, supervisor_id)
+insert into employees(employee_id, first_name, last_name, username, password, supervisor_id)
 values(4, 'Nymphadora', 'Tonks', 'tonks', 'lupin', 2);
-insert into employee(employee_id, first_name, last_name, username, password, supervisor_id)
+insert into employees(employee_id, first_name, last_name, username, password, supervisor_id)
 values(5, 'Rowena', 'Ravenclaw', 'raven', 'claw', 4);
-insert into employee(employee_id, first_name, last_name, username, password, supervisor_id)
+insert into employees(employee_id, first_name, last_name, username, password, supervisor_id)
 values(6, 'Sybill', 'Trelawney', 'syb', 'lawn', 4);
-insert into employee(employee_id, first_name, last_name, username, password, supervisor_id)
+insert into employees(employee_id, first_name, last_name, username, password, supervisor_id)
 values(7, 'Filius', 'Flitwick', 'flit', 'wick', 2);
 
-insert into role values(1, 'Employee');
-insert into role values(2, 'Supervisor');
-insert into role values(3, 'Department Head');
-insert into role values(4, 'BenCo');
+insert into role_type values(1, 'Employee');
+insert into role_type values(2, 'Supervisor');
+insert into role_type values(3, 'Department Head');
+insert into role_type values(4, 'BenCo');
 
 --figure out all the levels of role- all will employee, some will have others
 insert into employee_role values(1, 1, 4);
@@ -52,12 +52,30 @@ insert into department values(1, 'International Magical Cooperation', 1);
 insert into department values(2, 'Magical Accidents and Catastrophes', 2);
 insert into department values(3, 'Mysteries', 7);
 
-update employee set department_id=1 where employee_id = 1;
-update employee set department_id=1 where employee_id = 3;
-update employee set department_id=2 where employee_id = 2;
-update employee set department_id=2 where employee_id = 4;
-update employee set department_id=2 where employee_id = 5;
-update employee set department_id=3 where employee_id = 7;
-update employee set department_id=3 where employee_id = 6;
+update employees set department_id=1 where employee_id = 1;
+update employees set department_id=1 where employee_id = 3;
+update employees set department_id=2 where employee_id = 2;
+update employees set department_id=2 where employee_id = 4;
+update employees set department_id=2 where employee_id = 5;
+update employees set department_id=3 where employee_id = 7;
+update employees set department_id=3 where employee_id = 6;
+
+--adding claims
+insert into claims(employee_id, event_type_id, grade_format_id, start_date, submission_date, 
+location, description, justification, cost) 
+values(3, 5, 2, '2018-04-27', '01-04-2018', 'AZ', 'House elf stuff', 
+'Cause Dobby likes it', 350);
+
+insert into claims(employee_id, event_type_id, grade_format_id, start_date, submission_date,
+location, description, justification, cost) 
+values(1, 3, 3, '2019-12-31', '08-04-2019', 'CA', 'Leviosa not leviosa', 
+'Hermoine is the best', 1500);
+
+--adding a couple test comments
+insert into claim_comment(claim_id, employee_id, user_comment)
+values(1, 1, 'Dobby, please explain how this course is relevant to your work');
+
+insert into claim_comment(claim_id, employee_id, user_comment)
+values(1, 3, 'Dobby is free. He can do what he wants');
 
 commit;
