@@ -1,5 +1,28 @@
-.navbar-navbar {
+.navbar {
+    background-color: #e3f2fd;
+}
+
+// .navbar-navbar {
+//     font-size: x-large!important;
+//     color: dimgrey!important;
+//     font-weight: 800!important;
+//     background-color: #e3f2fd!important;
+// }
+.nav-link {
+    padding: .5rem 1rem;
+    color: gray!important;
+    // font-weight: 800;
+    font-weight: 900;
+    font-size: larger!important;
+}
+
+img {
+    margin-left: 1rem;
+}
+
+.badge-primary {
+    color: #333!important;
     font-size: x-large!important;
-    color: dimgrey!important;
-    font-weight: 800!important;
+    font-weight: 900!important;
+    background-color: #e3f2fd!important;
 }

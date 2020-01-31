@@ -61,21 +61,21 @@ update employees set department_id=3 where employee_id = 7;
 update employees set department_id=3 where employee_id = 6;
 
 --adding claims
-insert into claims(employee_id, event_type_id, grade_format_id, start_date, submission_date, 
+insert into claims(claim_id, employee_id, event_type_id, grade_format_id, start_date, submission_date, 
 location, description, justification, cost) 
-values(3, 5, 2, '2018-04-27', '01-04-2018', 'AZ', 'House elf stuff', 
+values(1, 3, 5, 2, '2018-04-27', '01-04-2018', 'AZ', 'House elf stuff', 
 'Cause Dobby likes it', 350);
 
-insert into claims(employee_id, event_type_id, grade_format_id, start_date, submission_date,
+insert into claims(claim_id, employee_id, event_type_id, grade_format_id, start_date, submission_date,
 location, description, justification, cost) 
-values(1, 3, 3, '2019-12-31', '08-04-2019', 'CA', 'Leviosa not leviosa', 
+values(2, 1, 3, 3, '2019-12-31', '08-04-2019', 'CA', 'Leviosa not leviosa', 
 'Hermoine is the best', 1500);
 
 --adding a couple test comments
-insert into claim_comment(claim_id, employee_id, user_comment)
-values(1, 1, 'Dobby, please explain how this course is relevant to your work');
+insert into claim_comment(comment_id, claim_id, employee_id, user_comment)
+values(1, 1, 1, 'Dobby, please explain how this course is relevant to your work');
 
-insert into claim_comment(claim_id, employee_id, user_comment)
-values(1, 3, 'Dobby is free. He can do what he wants');
+insert into claim_comment(comment_id, claim_id, employee_id, user_comment)
+values(2, 1, 3, 'Dobby is free. He can do what he wants');
 
 commit;

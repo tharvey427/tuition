@@ -1,1 +1,31 @@
-<p>view-claims works!</p>
+<div class="box">
+    <h1>View Claim(s)</h1>
+    <table id="claims" class="table">
+        <thead class="thead-dark">
+            <th scope="col">Claim ID</th>
+            <th scope="col">Employee Name</th>
+            <th scope="col">Event Type</th>
+            <th scope="col">Grade Format</th>
+            <th scope="col">Start Date</th>
+            <th scope="col">Submission Date</th>
+            <th scope="col">Location</th>
+            <th scope="col">Description</th>
+            <th scope="col">Justification</th>
+            <th scope="col">Cost</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of claims">
+                <td>{{c.claimId}}</td>
+                <td>{{c.employee.first}} {{c.employee.last}}</td>
+                <td>{{c.event.eventName}}</td>
+                <td>{{c.grade.gradeFormat}}</td>
+                <td>{{c.startDate}}</td>
+                <td>{{c.submissionDate}}</td>
+                <td>{{c.location}}</td>
+                <td>{{c.description}}</td>
+                <td>{{c.justification}}</td>
+                <td>{{c.cost}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

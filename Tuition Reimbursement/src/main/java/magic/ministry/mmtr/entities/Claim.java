@@ -12,7 +12,7 @@ public class Claim {
     private Integer claimId;
 
     @ManyToOne
-    @JoinColumn(name = "employees")
+    @JoinColumn(name = "employee_id")
     private Employee employee;
 
     @OneToOne

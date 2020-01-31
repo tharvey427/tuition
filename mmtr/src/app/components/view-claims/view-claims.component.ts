@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Claim } from 'src/app/models/claim';
+import { ClaimService } from 'src/app/services/claim.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-view-claims',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewClaimsComponent implements OnInit {
 
-  constructor() { }
+  public claim: Claim;
+  public claims: Claim[];
+
+  constructor(private cs: ClaimService, private toastr: ToastrService) { }
 
   ngOnInit() {
+    this.cs.getAllClaims().subscribe((data: Claim[]) => {
+      this.claims = data;
+    });
   }
 
 }

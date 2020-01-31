@@ -38,6 +38,7 @@ public class EmployeeController {
 
     @PostMapping(value = "/add")
     public Employee addEmployee(@RequestBody Employee employee) {
+        employee = es.newEmployee(employee);
         return es.newEmployee(employee);
     }
 }

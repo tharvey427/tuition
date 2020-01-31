@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Set;
 
 @Repository
-public interface ClaimRepository extends JpaRepository<Claim, Integer> {
+public interface ClaimRepository extends CrudRepository<Claim, Integer> {
 
     Claim findByClaimId(int id);
 
