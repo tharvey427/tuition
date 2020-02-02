@@ -1,4 +1,4 @@
-<ng-container>
+<ng-container *ngIf="!loggedUser">
     <nav class="navbar navbar-expand-sm navbar-dark">
         <a class="navbar-brand" routerLink="home">
             <span class="badge-primary">Ministry of Magic</span>
@@ -20,7 +20,8 @@
     </nav>
 </ng-container>
 
-<ng-template #employee>
+<!-- <ng-template #employee> -->
+<ng-container *ngIf="loggedUser">
     <nav class="navbar navbar-expand-sm navbar-dark">
         <!-- bg-dark -->
         <a class="navbar-brand" routerLink="home">
@@ -41,4 +42,5 @@
             <span class="navbar-toggler-icon"></span>
           </button>
     </nav>
-</ng-template>
+</ng-container>
+<!-- </ng-template> -->

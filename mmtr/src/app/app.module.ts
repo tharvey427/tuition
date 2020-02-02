@@ -10,7 +10,6 @@ import { EndpointsService } from './constants/endpoints.service';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
-// import { AngularWebStorageModule } from 'angular-sessionstorage';
 import { AngularWebStorageModule } from 'angular-web-storage';
 // import { AppBootstrapModule } from './app-bootstrap/app-bootstrap.module';
 // import {NgbModule} from '@ng-bootstrap/ng-bootstrap';

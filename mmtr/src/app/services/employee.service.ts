@@ -32,12 +32,13 @@ export class EmployeeService {
         {headers: this.headers, withCredentials: true}).pipe(
         map(resp => {
           console.log(resp);
+          // response not linking to loggedUser
           const loggedUser: Employee = resp as Employee;
           this.session.set('Employee', JSON.stringify(this.employee));
           console.log(this.endpoints.login);
           console.log(this.headers);
           console.log(this.http);
-          return this.employee;
+          return loggedUser;
         })
       );
     }
