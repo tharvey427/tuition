@@ -11,6 +11,8 @@ public interface EmployeeService {
 
     public Employee newEmployee(Employee employee);
 
+    public Employee login(String username, String password);
+
     public Employee findEmployeeById(int id);
 
     public Employee updateEmployee(Employee employee);

@@ -10,6 +10,7 @@ export class EndpointsService {
   public readonly getEmployee: string = this.baseUrl + '/employees/${id}';
   public readonly getAllClaims: string = this.baseUrl + '/claims';
   public readonly getClaim: string = this.baseUrl + '/claims/${id}';
+  public readonly login: string = this.baseUrl + '/login';
 
   constructor() { }
 }

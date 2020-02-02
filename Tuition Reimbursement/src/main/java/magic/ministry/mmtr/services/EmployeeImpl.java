@@ -23,6 +23,11 @@ public class EmployeeImpl implements EmployeeService {
     }
 
     @Override
+    public Employee login(String username, String password) {
+        return er.findByUsernameAndPassword(username, password);
+    }
+
+    @Override
     public Employee findEmployeeById(int id) {
         return er.findById(id);
     }

@@ -1,20 +1,44 @@
-<nav class="navbar navbar-expand-sm navbar-dark">
-    <!-- bg-dark -->
-    <a class="navbar-brand" routerLink="home">
-        <span class="badge-primary">Ministry of Magic</span>
-        <img src="assets/mm-crest.png" width="60" height="60" alt="">
-    </a>
+<ng-container>
+    <nav class="navbar navbar-expand-sm navbar-dark">
+        <a class="navbar-brand" routerLink="home">
+            <span class="badge-primary">Ministry of Magic</span>
+            <img src="assets/mm-crest.png" width="60" height="60" alt="">
+        </a>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                Username:
+                <input type="text" [(ngModel)]="username">
+            </li>
+            <li class="nav-item">
+                Password:
+                <input type="password" [(ngModel)]="password" (keydown.enter)="login()">
+            </li>
+            <li class="nav-item">
+                <button class="btn btn-primary" (click)="login()">Login</button>
+            </li>
+        </ul>
+    </nav>
+</ng-container>
 
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <!-- <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a> -->
-            <a class="nav-item nav-link" id="employees" routerLink="employees">Employees</a>
-            <a class="nav-item nav-link" id="claims" routerLink="claims">Claims</a>
-            <!-- <a class="nav-item nav-link" href="#">Pricing</a> -->
-            <!-- <a class="nav-item nav-link disabled" href="#">Disabled</a> -->
+<ng-template #employee>
+    <nav class="navbar navbar-expand-sm navbar-dark">
+        <!-- bg-dark -->
+        <a class="navbar-brand" routerLink="home">
+            <span class="badge-primary">Ministry of Magic</span>
+            <img src="assets/mm-crest.png" width="60" height="60" alt="">
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <!-- <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a> -->
+                <a class="nav-item nav-link" id="employees" routerLink="employees">Employees</a>
+                <a class="nav-item nav-link" id="claims" routerLink="claims">Claims</a>
+                <!-- <a class="nav-item nav-link" href="#">Pricing</a> -->
+                <!-- <a class="nav-item nav-link disabled" href="#">Disabled</a> -->
+            </div>
         </div>
-    </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-</nav>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    </nav>
+</ng-template>

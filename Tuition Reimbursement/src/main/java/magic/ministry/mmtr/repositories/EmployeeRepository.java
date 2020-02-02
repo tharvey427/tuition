@@ -13,6 +13,8 @@ public interface EmployeeRepository extends CrudRepository<Employee, Integer> {
 // adding new employee only worked with Crud repository, not JPA!!!
     Employee findByUsername (String username);
 
+    Employee findByUsernameAndPassword (String username, String password);
+
     Set<Employee> findByDepartment(Department department);
 
     Set<Employee> findBySupervisor(Employee supervisor);
