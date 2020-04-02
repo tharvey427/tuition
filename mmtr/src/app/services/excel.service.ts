@@ -28,13 +28,12 @@ export class ExcelService {
   //   // });
   // }
 
-  exportEmployee(table: any[], fileName: string): void {
+  exportEmployee(fileName: string, wb: XLSX.WorkBook): void {
     // adding data to worksheets
-    const ws: XLSX.WorkSheet = XLSX.utils.table_to_sheet(table);
+    // const ws: XLSX.WorkSheet = XLSX.utils.table_to_sheet(table);
 
     /* generate workbook and add the worksheet */
-    const wb: XLSX.WorkBook = { Sheets: { 'data': ws }, SheetNames: ['data'] };
-   
+    // const wb: XLSX.WorkBook = { Sheets: { 'data': ws }, SheetNames: ['data'] };
 
     const excelBuffer: any = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });
     this.saveExcelFile(excelBuffer, fileName);

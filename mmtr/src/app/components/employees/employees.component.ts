@@ -60,7 +60,21 @@ export class EmployeesComponent implements OnInit {
   // }
 
   generateExcel(): void {
-    this.excelService.exportEmployee(this.excelTable.nativeElement, 'employees');
+    //   /* generate workbook and add the worksheet */
+    const wb: XLSX.WorkBook = XLSX.utils.book_new();
+
+  //   /* table id is passed over here */
+    const element = document.getElementById('excelTable');
+
+  //   // adding data to worksheets
+    const ws: XLSX.WorkSheet = XLSX.utils.table_to_sheet(element);
+    // const ws2: XLSX.WorkSheet = XLSX.utils.table_to_sheet(this.excelTable.nativeElement);
+
+  //   // adding worksheets to book
+    XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+    // XLSX.utils.book_append_sheet(wb, ws2, '2');
+
+    this.excelService.exportEmployee('Employees', wb);
   }
 
 }
