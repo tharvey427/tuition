@@ -1,13 +1,13 @@
 package magic.ministry.mmtr.controllers;
 
 import magic.ministry.mmtr.entities.Claim;
+import magic.ministry.mmtr.entities.Employee;
 import magic.ministry.mmtr.repositories.ClaimRepository;
-import magic.ministry.mmtr.repositories.EmployeeRepository;
 import magic.ministry.mmtr.services.ClaimService;
-import magic.ministry.mmtr.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Set;
 
 @RestController
@@ -29,5 +29,14 @@ public class ClaimController {
     @GetMapping(value = "/{id}")
     public Claim getClaim(@PathVariable Integer id) {
         return cr.findByClaimId(id);
+    }
+
+    // this method can get all claims from one employee
+    //even though both mappings have employee, employee is needed as path variable
+    // first employee could be substituted
+        @GetMapping(value = "/employee/{employee}")
+//    @GetMapping(value = "/employee/{id}")
+    public List<Claim> getClaimsByEmployee(@PathVariable Employee employee) {
+        return cs.findClaimByEmployee(employee);
     }
 }

@@ -5,6 +5,7 @@ import { EndpointsService } from '../constants/endpoints.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import {SessionStorage, SessionStorageService} from 'angular-web-storage';
+import { CookieService } from 'ngx-cookie-service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,17 +13,22 @@ import {SessionStorage, SessionStorageService} from 'angular-web-storage';
 export class EmployeeService {
   private headers = new HttpHeaders({'Content-Type': 'application/x-www-form-urlencoded'});
   private employee: Employee;
+  private readonly baseUrl = 'http://localhost:8080';
   // appURL = this.endpoints.login();
 
   constructor(private http: HttpClient, private endpoints: EndpointsService,
-              public session: SessionStorageService) { }
+              public session: SessionStorageService, private cookie: CookieService) { }
 
   getAllEmployees(): Observable<Employee[]> {
     return this.http.get<Employee[]>(this.endpoints.getAllEmployees);
   }
 
-  getEmployee(): Observable<Employee> {
-    return this.http.get<Employee>(this.endpoints.getEmployee);
+  // getEmployee(employeeId: number): Observable<Employee> {
+  //   return this.http.get<Employee>(this.endpoints.getEmployee);
+  // }
+
+  getEmployee(employeeId): Observable<Employee> {
+    return this.http.get<Employee>(`${this.baseUrl + 'employees'}/${employeeId}`);
   }
 
   login(username: string, password: string): Observable<Employee> {
@@ -31,16 +37,17 @@ export class EmployeeService {
       return this.http.post(this.endpoints.login, body,
         {headers: this.headers, withCredentials: true}).pipe(
         map(resp => {
-          console.log(resp);
-          // response not linking to loggedUser
           const loggedUser: Employee = resp as Employee;
-          this.session.set('Employee', JSON.stringify(this.employee));
-          console.log(this.endpoints.login);
-          console.log(this.headers);
-          console.log(this.http);
+          sessionStorage.setItem('employee', loggedUser.first);
+          // this.session.set('Employee', JSON.stringify(this.employee));
           return loggedUser;
         })
       );
     }
   }
+
+  logout() {
+    // this.cookie.delete(username)
+  }
+
 }

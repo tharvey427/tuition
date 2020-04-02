@@ -34,10 +34,15 @@
                 <!-- <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a> -->
                 <a class="nav-item nav-link" id="employees" routerLink="employees">Employees</a>
                 <a class="nav-item nav-link" id="claims" routerLink="claims">Claims</a>
+                <a class="nav-item nav-link" id="dashboard" routerLink="dashboard">Dashboard</a>
                 <!-- <a class="nav-item nav-link" href="#">Pricing</a> -->
                 <!-- <a class="nav-item nav-link disabled" href="#">Disabled</a> -->
             </div>
         </div>
+        <span class="name">Welcome {{loggedUser.first}} {{loggedUser.last}}</span>
+        <span class=logout *ngIf="loggedUser">
+            <button class="btn btn-danger logout" (click)="logout()">Logout</button>
+        </span>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>

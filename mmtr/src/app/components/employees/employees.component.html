@@ -1,0 +1,20 @@
+<table id="employees" class="table" id="excelTable">
+    <thead class="thead-dark">
+        <th scope="col">Employee ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Username</th>
+        <th scope="col">Supervisor</th>
+        <th scope="col">Department</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of employees">
+            <td>{{e.employeeId}}</td>
+            <td>{{e.first}} {{e.last}}</td>
+            <td>{{e.username}}</td>
+            <td>{{e.supervisor?.first}} {{e.supervisor?.last}}</td>
+            <td>{{e.department.departmentName}}</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<button (click)="generateExcel()">Generate Excel</button>

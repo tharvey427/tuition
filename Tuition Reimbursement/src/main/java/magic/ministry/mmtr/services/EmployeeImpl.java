@@ -6,7 +6,6 @@ import magic.ministry.mmtr.repositories.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import java.util.*;
 
 @Service
@@ -18,7 +17,6 @@ public class EmployeeImpl implements EmployeeService {
     @Override
     public Employee newEmployee(Employee employee) {
         employee = er.save(employee);
-//        employee = er.
         return employee;
     }
 

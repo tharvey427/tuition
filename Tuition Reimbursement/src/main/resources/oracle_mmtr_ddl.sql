@@ -26,7 +26,7 @@ create table grade_format (
 create table event_type (
     event_type_id number(20) primary key,
     event_name varchar2(100),
-    reimbursement_percentage decimal(5,2)
+    reimbursement_percentage float(50)
 );
     
 create table employees (
@@ -135,56 +135,3 @@ alter table employees add constraint fk_employee_department
 foreign key (department_id) references department (department_id);
 --add fk for emp supervisor and dept
 
---sequences and triggers
---create sequence claim_seq;
---create sequence comment_seq;
---create sequence document_seq;
---create sequence allowance_seq;
---
---create or replace trigger claim_pk_trig
---before insert or update on claims
---for each row
---begin
---    if INSERTING then
---        select claim_seq.nextVal into :new.claim_id from dual;
---    elsif UPDATING then
---        select :old.claim_id into :new.claim_id from dual;
---    end if;
---end;
---/
---
---create or replace trigger comment_pk_trig
---before insert or update on claim_comment
---for each row
---begin
---    if INSERTING then
---        select comment_seq.nextVal into :new.comment_id from dual;
---    elsif UPDATING then
---        select :old.comment_id into :new.comment_id from dual;
---    end if;
---end;
---/
---
---create or replace trigger document_pk_trig
---before insert or update on claim_document
---for each row
---begin
---    if INSERTING then
---        select document_seq.nextVal into :new.document_id from dual;
---    elsif UPDATING then
---        select :old.document_id into :new.document_id from dual;
---    end if;
---end;
---/
---
---create or replace trigger allowance_pk_trig
---before insert or update on allowance
---for each row
---begin
---    if INSERTING then
---        select allowance_seq.nextVal into :new.allowance_id from dual;
---    elsif UPDATING then
---        select :old.allowance_id into :new.allowance_id from dual;
---    end if;
---end;
---/

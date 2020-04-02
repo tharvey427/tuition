@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Set;
 
 //@CrossOrigin(origins = "*", allowCredentials = "true")
@@ -35,6 +36,11 @@ public class EmployeeController {
     public Employee getEmployee(@PathVariable Integer id) {
         return es.findEmployeeById(id);
     }
+
+//    @GetMapping(value = "/{id}/supervisor")
+//    public List<Employee> getEmployeesBySupervisor(@PathVariable Integer id) {
+//        return es.getEmployeesBySupervisor()
+//    }
 
     @PostMapping(value = "/add")
     public Employee addEmployee(@RequestBody Employee employee) {

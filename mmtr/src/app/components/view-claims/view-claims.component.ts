@@ -19,6 +19,10 @@ export class ViewClaimsComponent implements OnInit {
     this.cs.getAllClaims().subscribe((data: Claim[]) => {
       this.claims = data;
     });
+
+    this.cs.getClaim(this.claim.claimId).subscribe((data: Claim) => {
+      this.claim = data;
+    });
   }
 
 }

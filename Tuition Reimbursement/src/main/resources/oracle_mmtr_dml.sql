@@ -71,6 +71,11 @@ location, description, justification, cost)
 values(2, 1, 3, 3, '2019-12-31', '08-04-2019', 'CA', 'Leviosa not leviosa', 
 'Hermoine is the best', 1500);
 
+insert into claims(claim_id, employee_id, event_type_id, grade_format_id, start_date, submission_date, 
+location, description, justification, cost) 
+values(3, 3, 2, 1, '2019-05-17', '02-03-2019', 'GA', 'Peeves', 
+'Cause Dobby likes it', 350);
+
 --adding a couple test comments
 insert into claim_comment(comment_id, claim_id, employee_id, user_comment)
 values(1, 1, 1, 'Dobby, please explain how this course is relevant to your work');

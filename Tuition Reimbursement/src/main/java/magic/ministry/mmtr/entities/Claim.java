@@ -28,14 +28,14 @@ public class Claim {
     private String location;
     private String description;
     private String justification;
-    private Double cost;
+    private Float cost;
 
     public Claim() {
     }
 
     public Claim(Integer claimId, Employee employee, Event event, Grade grade,
                  String startDate, String submissionDate, String location,
-                 String description, String justification, Double cost) {
+                 String description, String justification, Float cost) {
         this.claimId = claimId;
         this.employee = employee;
         this.event = event;
@@ -120,11 +120,11 @@ public class Claim {
         this.justification = justification;
     }
 
-    public Double getCost() {
+    public Float getCost() {
         return cost;
     }
 
-    public void setCost(Double cost) {
+    public void setCost(Float cost) {
         this.cost = cost;
     }
 

@@ -1,7 +1,9 @@
 package magic.ministry.mmtr.services;
 
 import magic.ministry.mmtr.entities.Claim;
+import magic.ministry.mmtr.entities.Employee;
 
+import java.util.List;
 import java.util.Set;
 
 public interface ClaimService {
@@ -11,4 +13,6 @@ public interface ClaimService {
     public Claim addClaim(Claim claim);
 
     public Claim updateClaim(Claim claim);
+
+    public List<Claim> findClaimByEmployee(Employee employee);
 }

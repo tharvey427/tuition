@@ -5,7 +5,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EmployeeComponent } from './components/employees/employee/employee.component';
+import { EmployeesComponent } from './components/employees/employees.component';
 import { EndpointsService } from './constants/endpoints.service';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
@@ -17,15 +17,22 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { ViewClaimsComponent } from './components/view-claims/view-claims.component';
 import { AddClaimComponent } from './components/add-claim/add-claim.component';
+import { CookieService } from 'ngx-cookie-service';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { EmployeeComponent } from './components/employee/employee.component';
+import { ExcelService } from './services/excel.service';
+import { CommonModule, DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeeComponent,
+    EmployeesComponent,
     NavbarComponent,
     HomeComponent,
     ViewClaimsComponent,
-    AddClaimComponent
+    AddClaimComponent,
+    DashboardComponent,
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +41,7 @@ import { AddClaimComponent } from './components/add-claim/add-claim.component';
     FormsModule,
     BrowserModule,
     AngularWebStorageModule,
+    CommonModule,
     ToastrModule.forRoot(),
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
@@ -45,7 +53,10 @@ import { AddClaimComponent } from './components/add-claim/add-claim.component';
       ModalModule
     ],
   providers: [
-    EndpointsService
+    EndpointsService,
+    CookieService,
+    ExcelService,
+    DatePipe // needed datepipe as provider, doesn't have to be installed
   ],
   bootstrap: [AppComponent]
 })

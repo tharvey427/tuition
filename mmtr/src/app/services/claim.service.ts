@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { EndpointsService } from '../constants/endpoints.service';
 import { Observable } from 'rxjs';
 import { Claim } from '../models/claim';
+import { Employee } from '../models/employee';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,13 @@ export class ClaimService {
     return this.http.get<Claim[]>(this.endpoints.getAllClaims);
   }
 
-  getClaim(): Observable<Claim> {
-    return this.http.get<Claim>(this.endpoints.getClaim);
+  getClaim(claimId: number): Observable<Claim> {
+    return this.http.get<Claim>(this.endpoints.getClaim.replace(
+      '${id}', claimId.toString()
+    ));
+  }
+
+  getClaimsByEmployee(employee: Employee): Observable<Claim[]> {
+    return this.http.get<Claim[]>(this.endpoints.getClaimByEmployee);
   }
 }
