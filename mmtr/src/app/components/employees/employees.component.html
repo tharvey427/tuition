@@ -1,3 +1,21 @@
+<!-- <mat-progress-bar mode="determinate" [value]="progressValue" *ngIf="progressValue > 0"></mat-progress-bar> -->
+<div>
+    <p *ngFor="let i of rangeArray">
+    .
+    </p>
+    </div>
+
+    <div class="perc" fxLayout="row" fxLayoutAlign="start center" >
+        <div><span class="percentage">{{progressValue}} %</span></div>
+        <div><mat-progress-bar ng-show="progressValue" fxLayout="row" fxFlex mode="determinate" [value]="progressValue" *ngIf="progressValue > 0"><p>{{progressValue}}</p></mat-progress-bar></div>
+      </div>
+
+      <!-- <div class="col-md-12">
+        <span ng-if="submittedArt && !myFile" class='erroMassge'>Please choose an image to upload</span>
+        <span id="percentage" ng-show="progressBarEdit">{{uploadprogress | number: 0}} %</span>
+        <md-progress-linear class="md-warn" md-mode="buffer" value="{{uploadprogressartedit}}" ng-show="progressBarEdit"></md-progress-linear>
+     </div> -->
+
 <table id="employees" class="table" id="excelTable">
     <thead class="thead-dark">
         <th scope="col">Employee ID</th>
@@ -18,3 +36,4 @@
 </table>
 <br>
 <button (click)="generateExcel()">Generate Excel</button>
+<p [(ngModel)]="employees"></p>

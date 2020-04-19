@@ -11,8 +11,6 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { AngularWebStorageModule } from 'angular-web-storage';
-// import { AppBootstrapModule } from './app-bootstrap/app-bootstrap.module';
-// import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { ViewClaimsComponent } from './components/view-claims/view-claims.component';
@@ -22,6 +20,10 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { EmployeeComponent } from './components/employee/employee.component';
 import { ExcelService } from './services/excel.service';
 import { CommonModule, DatePipe } from '@angular/common';
+import { MatProgressBarModule, MatProgressSpinnerModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { PokemonComponent } from './components/pokemon/pokemon.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { CommonModule, DatePipe } from '@angular/common';
     ViewClaimsComponent,
     AddClaimComponent,
     DashboardComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    PokemonComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +45,10 @@ import { CommonModule, DatePipe } from '@angular/common';
     BrowserModule,
     AngularWebStorageModule,
     CommonModule,
+    BrowserAnimationsModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    FlexLayoutModule,
     ToastrModule.forRoot(),
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
