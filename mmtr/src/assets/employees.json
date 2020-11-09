@@ -1,0 +1,22 @@
+{
+    "employees": [
+        {
+            "employeeId": 1,
+            "first": "hermoine",
+            "last": "granger",
+            "username": "her",
+            "password": "grange",
+            "department": "DMR",
+            "supervisor": "dobby"
+        },
+        {
+            "employeeId": 2,
+            "first": "dobby",
+            "last": "free",
+            "username": "dobby",
+            "password": "socks",
+            "department": "DMR",
+            "supervisor": null
+        }
+    ]
+}
