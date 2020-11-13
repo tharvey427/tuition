@@ -1,7 +1,7 @@
 import { Component, OnChanges, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-sidebar',
+  selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })

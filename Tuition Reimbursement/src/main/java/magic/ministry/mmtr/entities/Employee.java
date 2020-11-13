@@ -3,7 +3,7 @@ package magic.ministry.mmtr.entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "employees")
+@Table(name = "employee")
 public class Employee {
 
     @Id

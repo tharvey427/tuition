@@ -13,12 +13,12 @@ public class Event {
 
     private String eventName;
 
-    private Float reimbursementPercentage;
+    private Integer reimbursementPercentage;
 
     public Event() {
     }
 
-    public Event(Integer eventTypeId, String eventName, Float reimbursementPercentage) {
+    public Event(Integer eventTypeId, String eventName, Integer reimbursementPercentage) {
         this.eventTypeId = eventTypeId;
         this.eventName  = eventName;
         this.reimbursementPercentage = reimbursementPercentage;
@@ -40,11 +40,11 @@ public class Event {
         this.eventName = eventName;
     }
 
-    public Float getReimbursementPercentage() {
+    public Integer getReimbursementPercentage() {
         return reimbursementPercentage;
     }
 
-    public void setReimbursementPercentage(Float reimbursementPercentage) {
+    public void setReimbursementPercentage(Integer reimbursementPercentage) {
         this.reimbursementPercentage = reimbursementPercentage;
     }
 }

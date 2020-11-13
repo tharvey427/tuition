@@ -4,13 +4,14 @@
   <mat-sidenav #sidebar opened mode="side">
     <p>sidenav section</p>
     <mat-nav-list>
-      <a mat-list-item>First list item</a>
+      <a mat-list-item [routerLink]="['claims']">Claims</a>
     </mat-nav-list>
   </mat-sidenav>
 
   <mat-sidenav-content>
     <!-- button below toggles sidebar -->
-    <button mat-button (click)="sidebar.toggle()">Main Content</button>
+    <!-- <button mat-button (click)="sidebar.toggle()">Main Content</button> -->
+
     <!-- router outlet below will display page content from url in router -->
     <router-outlet></router-outlet>
   </mat-sidenav-content>

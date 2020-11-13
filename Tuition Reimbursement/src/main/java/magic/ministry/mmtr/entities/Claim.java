@@ -3,7 +3,7 @@ package magic.ministry.mmtr.entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "claims")
+@Table(name = "claim")
 public class Claim {
 
     @Id
@@ -28,14 +28,14 @@ public class Claim {
     private String location;
     private String description;
     private String justification;
-    private Float cost;
+    private Integer cost;
 
     public Claim() {
     }
 
     public Claim(Integer claimId, Employee employee, Event event, Grade grade,
                  String startDate, String submissionDate, String location,
-                 String description, String justification, Float cost) {
+                 String description, String justification, Integer cost) {
         this.claimId = claimId;
         this.employee = employee;
         this.event = event;
@@ -120,11 +120,11 @@ public class Claim {
         this.justification = justification;
     }
 
-    public Float getCost() {
+    public Integer getCost() {
         return cost;
     }
 
-    public void setCost(Float cost) {
+    public void setCost(Integer cost) {
         this.cost = cost;
     }
 

@@ -1,28 +1,18 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavbarComponent } from './navbar/navbar.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { MaterialModule } from '../material/material.module';
-import { HomeComponent } from './home/home.component';
+import { ClaimComponent } from './claim/claim.component';
 import { LoginComponent } from './login/login.component';
-import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { MaterialModule } from '../material/material.module';
 
 @NgModule({
   declarations: [
-    NavbarComponent,
-    DashboardComponent,
-    HomeComponent,
+    ClaimComponent,
     LoginComponent
   ],
   imports: [
     CommonModule,
-    MaterialModule,
-    FormsModule,
-    RouterModule
-  ],
-  exports: [
-    DashboardComponent
+    MaterialModule
   ]
 })
 export class ViewsModule { }

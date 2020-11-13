@@ -9,7 +9,8 @@ import { MatSidenav } from '@angular/material/sidenav';
 })
 export class NavbarComponent implements OnInit {
   @Input() sidebar: MatSidenav;
-  // Above is same property/name as sidebar property defined in app-navbar of sidebar html file
+  // Above is same property/name as sidebar property defined in app-navbar of
+  // sidebar html file
 
   constructor() { }
 
