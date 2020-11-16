@@ -6,7 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatTableModule, MatTableDataSource } from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
 import { CdkTableModule } from '@angular/cdk/table';
 
 @NgModule({
@@ -19,7 +19,6 @@ import { CdkTableModule } from '@angular/cdk/table';
     MatCardModule,
     MatFormFieldModule,
     MatTableModule,
-    MatTableDataSource,
     CdkTableModule
   ]
 })

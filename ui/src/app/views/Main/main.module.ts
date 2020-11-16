@@ -12,8 +12,7 @@ import { RouterModule } from '@angular/router';
   declarations: [
     NavbarComponent,
     DashboardComponent,
-    HomeComponent,
-    LoginComponent
+    HomeComponent
   ],
   imports: [
     CommonModule,

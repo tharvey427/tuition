@@ -12,20 +12,17 @@ import { Claim } from 'src/app/classes/claim';
 })
 export class ClaimComponent implements OnInit {
   public claim: Claim;
-  public claims: Claim[];
   public dataSource = new MatTableDataSource<Claim>();
+
+  displayedColumns: string[] = ['claimId', 'empId', 'gradeId', 'start',
+  'submit', 'location', 'description', 'justification', 'cost'];
 
   constructor(private claimService: ClaimService) { }
 
   ngOnInit(): void {
     this.claimService.getAllClaims().subscribe((data: Claim[]) => {
-      this.claims = data;
       this.dataSource.data = data;
-      console.log(this.dataSource.data);
-      console.log(this.claims);
     });
-    // console.log(this.dataSource.data); empty array
-    // console.log(this.claims); undefined
 
     // this.claimService.getClaim(this.claim.claimId).subscribe((data: Claim) => {
     //   this.claim = data;
