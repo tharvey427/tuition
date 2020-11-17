@@ -17,14 +17,14 @@ import java.util.Set;
 public class EmployeeController {
 
     @Autowired
-    private EmployeeService es;
+    private EmployeeService employeeService;
 
     @Autowired
     private EmployeeRepository er;
 
     @GetMapping()
     public Set<Employee> getEmployees() {
-        return es.getAllEmployees();
+        return employeeService.getAllEmployees();
     }
 
     @GetMapping(path = "/all") //this does the same as the emp service getEmployees method above
@@ -34,7 +34,7 @@ public class EmployeeController {
 
     @GetMapping(value = "{id}")
     public Employee getEmployee(@PathVariable Integer id) {
-        return es.findEmployeeById(id);
+        return employeeService.findEmployeeById(id);
     }
 
 //    @GetMapping(value = "/{id}/supervisor")
@@ -44,7 +44,7 @@ public class EmployeeController {
 
     @PostMapping(value = "/add")
     public Employee addEmployee(@RequestBody Employee employee) {
-        employee = es.newEmployee(employee);
-        return es.newEmployee(employee);
+        employee = employeeService.newEmployee(employee);
+        return employeeService.newEmployee(employee);
     }
 }

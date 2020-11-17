@@ -1,8 +1,9 @@
+import { Employee } from './employee1';
 export class Claim {
   claimId: number;
-  employeeId: number;
-  eventTypeId: number;
-  gradeFormatId: number;
+  employee: Employee;
+  event: string;
+  gradeFormat: string;
   startDate: string;
   submissionDate: string;
   location: string;

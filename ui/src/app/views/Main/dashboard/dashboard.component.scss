@@ -1,6 +1,9 @@
 mat-sidenav-content {
-  // height: 91vh;
-  // min-height: 100%;
-  height: auto;
+  // background-color: #e3f2fd;
   min-height: 91vh;
+}
+
+mat-sidenav {
+  background-color: #e3f2fd;
+  width: 150px;
 }

@@ -20,4 +20,10 @@ export class ClaimService {
       '${id}', claimId.toString()
     ));
   }
+
+  getAllClaimsByEmployee(employeeId: number): Observable<Claim[]> {
+    return this.http.get<Claim[]>(this.endpoint.getAllClaimsByEmployee.replace(
+      '${id}', employeeId.toString()
+    ));
+  }
 }

@@ -6,12 +6,16 @@ import { LoginComponent } from './login/login.component';
 import { MaterialModule } from '../material/material.module';
 import { FormsModule } from '@angular/forms';
 import { GradeComponent } from './grade/grade.component';
+import { ClaimDetailComponent } from './claim-detail/claim-detail.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     ClaimComponent,
     LoginComponent,
-    GradeComponent
+    GradeComponent,
+    ClaimDetailComponent,
+    PageNotFoundComponent
   ],
   imports: [
     CommonModule,

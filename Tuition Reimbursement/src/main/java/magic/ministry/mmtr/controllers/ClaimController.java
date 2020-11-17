@@ -34,9 +34,9 @@ public class ClaimController {
     // this method can get all claims from one employee
     //even though both mappings have employee, employee is needed as path variable
     // first employee could be substituted
-        @GetMapping(value = "/employee/{employee}")
-//    @GetMapping(value = "/employee/{id}")
-    public List<Claim> getClaimsByEmployee(@PathVariable Employee employee) {
-        return cs.findClaimByEmployee(employee);
+//        @GetMapping(value = "/employee/{employee}") //this works but confused me bc i expected i would have to put an object name, not number
+    @GetMapping(value = "/employee/{id}")
+    public List<Claim> getClaimsByEmployee(@PathVariable Employee id) {
+        return cs.findClaimByEmployee(id);
     }
 }

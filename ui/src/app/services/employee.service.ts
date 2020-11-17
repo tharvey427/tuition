@@ -15,7 +15,7 @@ export class EmployeeService {
     return this.http.get<Employee[]>(this.endpoint.getAllEmployees);
   }
 
-  getEmployeeById(employeeId: number): Observable<Employee> {
-    return this.http.get<Employee>(this.endpoint.getEmployeeById(employeeId));
-  }
+  // getEmployeeById(employeeId: number): Observable<Employee> {
+  //   return this.http.get<Employee>(this.endpoint.getEmployeeById(employeeId));
+  // }
 }
