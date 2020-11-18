@@ -1,9 +1,11 @@
-import { Employee } from './employee1';
-export class Claim {
+import { Grade } from './grade';
+import { Employee } from './employee';
+
+export interface Claim {
   claimId: number;
   employee: Employee;
   event: string;
-  gradeFormat: string;
+  gradeFormat: Grade;
   startDate: string;
   submissionDate: string;
   location: string;

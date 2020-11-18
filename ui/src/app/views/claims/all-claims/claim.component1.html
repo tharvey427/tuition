@@ -1,16 +1,15 @@
 <div class="box">
     <mat-card class="card">
       <mat-card-header>
-    <!-- <div mat-card-avatar></div> -->
         <mat-card-title>Claims</mat-card-title>
   <mat-card-subtitle>Details</mat-card-subtitle>
       </mat-card-header>
+
       <mat-card-content>
             <table mat-table [dataSource]="dataSource" matSort (matSortChange)="sortData($event)">
                 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <!-- above is the actual header row for each column (claim id, employee first, etc.) -->
-                <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-      <!-- above is the actual data displayed in the columns -->
+                 <!-- above is the actual header row for each column (claim id, employee first, etc.) -->
+                <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>  <!-- the actual data displayed in the columns -->
                 <!-- Claim ID Column -->
                 <ng-container matColumnDef="claimId">
                   <th mat-header-cell *matHeaderCellDef mat-sort-header>Claim ID</th>

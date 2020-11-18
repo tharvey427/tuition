@@ -1,16 +1,17 @@
 import { MatSort, Sort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 // import { ToastrService } from 'ngx-toastr';
-import { ClaimService } from './../../services/claim.service';
+import { ClaimService } from '../../../services/claim.service';
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { Claim } from 'src/app/classes/claim';
 
 @Component({
-  selector: 'app-claims',
-  templateUrl: './claim.component.html',
-  styleUrls: ['./claim.component.scss', './../grade/grade.component.scss'],
+  selector: 'app-all-claims',
+  templateUrl: './all-claims.component.html',
+  styleUrls: ['./all-claims.component.scss'],
+  // './../grade/grade.component.scss'
 })
-export class ClaimComponent implements OnInit, AfterViewInit {
+export class AllClaimsComponent implements OnInit, AfterViewInit {
   @ViewChild(MatSort) sort: MatSort;
   public dataSource = new MatTableDataSource<Claim>();
   public claims: Claim[];
@@ -59,10 +60,6 @@ export class ClaimComponent implements OnInit, AfterViewInit {
       switch (sort.active) {
         case 'claimId':
           return compare(a.claimId, b.claimId, isAsc);
-        // case 'employeeFirst':
-        //   return compare(a.claimId, b.claimId, isAsc);
-        case 'cost':
-          return compare(a.cost, b.cost, isAsc);
         default:
           return 0;
       }

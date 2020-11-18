@@ -1,7 +1,7 @@
-export interface Employee {
+export class Employee {
   employeeId: number;
-  firstName: string;
-  lastName: string;
+  first: string;
+  last: string;
   username: string;
   password: string;
   supervisorId: number;

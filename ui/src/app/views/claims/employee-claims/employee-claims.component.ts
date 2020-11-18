@@ -1,15 +1,14 @@
-import { ClaimService } from './../../services/claim.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSort, Sort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Claim } from 'src/app/classes/claim';
 
 @Component({
-  selector: 'app-claim-detail',
-  templateUrl: './claim-detail.component.html',
-  styleUrls: ['./claim-detail.component.scss']
+  selector: 'app-employee-claims',
+  templateUrl: './employee-claims.component.html',
+  styleUrls: ['./employee-claims.component.scss']
 })
-export class ClaimDetailComponent implements OnInit {
+export class EmployeeClaimsComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
   public dataSource = new MatTableDataSource<Claim>();
   public claims: Claim[];
@@ -28,10 +27,9 @@ export class ClaimDetailComponent implements OnInit {
     'cost',
   ];
 
-  constructor(private claimService: ClaimService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.claimService.getAllClaimsByEmployee(1);
   }
 
   sortData(sort: Sort) {

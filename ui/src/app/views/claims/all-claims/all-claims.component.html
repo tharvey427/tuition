@@ -1,0 +1,13 @@
+<div fxLayout="column">
+  <h1>Claims</h1>
+
+  <ul class="claims">
+    <li *ngFor="let claim of claims" [class.selected]="claim === selectedClaim" (click)="onSelect(claim)">
+      <span class="badge">{{ claim.claimId }}</span>
+      {{claim.employee.first}}
+      {{claim.employee.last}}
+    </li>
+  </ul>
+
+  <!-- <app-claim-detail [claim]="selectedClaim"></app-claim-detail> -->
+</div>

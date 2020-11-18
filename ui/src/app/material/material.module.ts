@@ -18,6 +18,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   exports: [
@@ -49,7 +50,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     OverlayModule,
     PortalModule,
     ScrollingModule,
-    CdkTableModule
+    FlexLayoutModule
   ]
 })
 export class MaterialModule { }

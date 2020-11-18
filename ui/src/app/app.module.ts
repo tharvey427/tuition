@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { MainModule } from './views/Main/main.module';
 import { HttpClientModule } from '@angular/common/http';
-import { ViewsModule } from './views/views.module';
+import { ViewsModule } from './views/claims/claims.module';
 
 @NgModule({
   declarations: [
@@ -18,8 +18,7 @@ import { ViewsModule } from './views/views.module';
     BrowserAnimationsModule,
     MaterialModule,
     MainModule,
-    HttpClientModule,
-    // ViewsModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
