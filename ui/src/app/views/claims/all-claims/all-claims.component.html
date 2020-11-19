@@ -1,11 +1,27 @@
-<div fxLayout="column">
+<!-- <div fxLayout="column">
   <h1>Claims</h1>
 
   <ul class="claims">
     <li *ngFor="let claim of claims" [class.selected]="claim === selectedClaim" (click)="onSelect(claim)">
       <span class="badge">{{ claim.claimId }}</span>
-      {{claim.employee.first}}
-      {{claim.employee.last}}
+      {{claim.employee.first}} {{claim.employee.last}}
+    </li>
+  </ul>
+
+  <app-claim-detail [claim]="selectedClaim"></app-claim-detail>
+</div> -->
+
+
+<div fxLayout="column">
+  <h1>Claims</h1>
+
+  <ul class="claims">
+    <li *ngFor="let claim of claims$ | async" [class.selected]="claim.claimId === selectedId">
+      <!-- async for claim observable was crucial in page working -->
+      <a [routerLink]="['/claim', claim.claimId]">
+        <span class="badge">{{ claim.claimId }}</span>
+        {{claim.employee.first}} {{claim.employee.last}}
+      </a>
     </li>
   </ul>
 

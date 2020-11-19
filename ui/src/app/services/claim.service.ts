@@ -15,9 +15,10 @@ export class ClaimService {
     return this.http.get<Claim[]>(this.endpoint.getAllClaims);
   }
 
-  getClaim(claimId: number): Observable<Claim> {
+  getClaim(claimId: number | string): Observable<Claim> {
     return this.http.get<Claim>(this.endpoint.getClaim.replace(
       '${id}', claimId.toString()
+    // return this.http.get<Claim>(this.endpoint.getClaim)
     ));
   }
 

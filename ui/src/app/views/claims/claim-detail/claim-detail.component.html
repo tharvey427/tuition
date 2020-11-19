@@ -1,4 +1,4 @@
-<div *ngIf="claim" class="details">
+<!-- <div *ngIf="claim" class="details">
   <h2>{{ claim.employee.first | uppercase }}</h2>
   <div><span>Claim ID: </span>{{ claim.claimId }}</div>
   <div>
@@ -6,18 +6,22 @@
       <input [(ngModel)]="claim.employee.first" placeholder="name" />
     </label>
   </div>
-</div>
-
-<!-- below is code that was originally on parent component, claim
-    in moving the code over, i had to change the reference from selectedClaim
-    to just claim (like input in ts file) in order for the code to work -->
-
-<!-- <div *ngIf="selectedClaim" class="claims">
-  <h2>{{ selectedClaim.employee.first | uppercase }}</h2>
-  <div><span>id: </span>{{ selectedClaim.claimId }}</div>
-  <div>
-    <label>
-      <input [(ngModel)]="selectedClaim.employee.first" placeholder="name" />
-    </label>
-  </div>
 </div> -->
+
+<h2>Claims</h2>
+<div *ngIf="claim$ | async as claim">
+  <h3>"{{ claim.employee.first }}"</h3>
+  <div>
+    <label>Id: </label>{{ claim.employee.employeeId }}</div>
+  <div>
+    <label>First Name: </label>
+    <input [(ngModel)]="claim.employee.first" placeholder="First Name"/>
+  </div>
+  <div>
+    <label>Last Name: </label>
+    <input [(ngModel)]="claim.employee.last" placeholder="Last Name"/>
+  </div>
+  <p>
+    <button (click)="goToClaims(claim)">Back</button>
+  </p>
+</div>

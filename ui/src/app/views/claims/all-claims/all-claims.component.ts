@@ -1,9 +1,10 @@
-import { MatSort, Sort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material/table';
-// import { ToastrService } from 'ngx-toastr';
+import { switchMap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 import { ClaimService } from '../../../services/claim.service';
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Claim } from 'src/app/classes/claim';
+import { ActivatedRoute } from '@angular/router';
+// import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-all-claims',
@@ -11,67 +12,34 @@ import { Claim } from 'src/app/classes/claim';
   styleUrls: ['./all-claims.component.scss'],
   // './../grade/grade.component.scss'
 })
-export class AllClaimsComponent implements OnInit, AfterViewInit {
-  @ViewChild(MatSort) sort: MatSort;
-  public dataSource = new MatTableDataSource<Claim>();
+export class AllClaimsComponent implements OnInit {
   public claims: Claim[];
+
   public selectedClaim: Claim;
+  public selectedId: number;
 
-  displayedColumns: string[] = [
-    'claimId',
-    'employeeFirst',
-    'employeeLast',
-    'gradeFormat',
-    'eventType',
-    'justification',
-    'cost',
-  ];
+  claims$: Observable<Claim[]>;
 
-  constructor(private claimService: ClaimService) {}
+  constructor(private claimService: ClaimService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.claimService.getAllClaims().subscribe((data: Claim[]) => {
-      this.dataSource.data = data;
-      this.claims = data;
-    });
+    // this.claimService.getAllClaims().subscribe((data: Claim[]) => {
+    //   this.claims = data;
+    // });
+
+    this.claims$ = this.route.paramMap.pipe(
+      switchMap(params => {
+        this.selectedId = +params.get('id');
+        return this.claimService.getAllClaims()
+      })
+    );
+
   }
 
-  ngAfterViewInit(): void {
-    // below needs to be edited for nested sort
-    // this.dataSource.sortingDataAccessor = (item, property) => {
-    //   switch (property) {
-    //     case 'employeeFirst':
-    //       return item.employeeFirst;
-    //     default:
-    //       return item[property];
-    //   }
-    // };
-    this.dataSource.sort = this.sort;
-  }
-
-  sortData(sort: Sort) {
-    const data = this.dataSource.data;
-    if (!sort.active || sort.direction === '') {
-      this.claims = data;
-      return;
-    }
-    this.claims = data.sort((a, b) => {
-      const isAsc = sort.direction === 'asc';
-      switch (sort.active) {
-        case 'claimId':
-          return compare(a.claimId, b.claimId, isAsc);
-        default:
-          return 0;
-      }
-    });
-  }
-
-  onSelect(claim: Claim): void {
+  onSelect(claim: Claim, id: number): void {
     this.selectedClaim = claim;
+    // this.selectedClaim.claimId = id; // this line caused above not to work
+    // this.router.navigate(['claims', id]);
     console.log(this.selectedClaim);
   }
-}
-
-function compare(a: number | string, b: number | string, isAsc: boolean) {
-  return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
 }

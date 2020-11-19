@@ -22,6 +22,7 @@ import { ClaimDetailComponent } from './claim-detail/claim-detail.component';
   imports: [
     CommonModule,
     MaterialModule,
+    RouterModule,
     FormsModule, // adding this was necessary to use ngfor or mat-table
     // RouterModule
   ]
