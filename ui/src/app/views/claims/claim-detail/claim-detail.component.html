@@ -10,9 +10,9 @@
 
 <h2>Claims</h2>
 <div *ngIf="claim$ | async as claim">
-  <h3>"{{ claim.employee.first }}"</h3>
+  <h3>"{{ claim.employee.first | uppercase }}"</h3>
   <div>
-    <label>Id: </label>{{ claim.employee.employeeId }}</div>
+    <label>ID: </label>{{ claim.employee.employeeId }}</div>
   <div>
     <label>First Name: </label>
     <input [(ngModel)]="claim.employee.first" placeholder="First Name"/>
@@ -22,6 +22,6 @@
     <input [(ngModel)]="claim.employee.last" placeholder="Last Name"/>
   </div>
   <p>
-    <button (click)="goToClaims(claim)">Back</button>
+    <button (click)="goToClaims(claim)">Back To Claims</button>
   </p>
 </div>

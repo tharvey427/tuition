@@ -21,5 +21,8 @@ public readonly getAllEvents: string = this.baseUrl + '/events';
 public readonly getAllEmployees: string = this.baseUrl + '/employees';
 public readonly getEmployeeById: string = this.baseUrl + '/employees/${id}';
 
+// Auth Methods
+public readonly login: string = this.baseUrl + '/login'
+
   constructor() { }
 }

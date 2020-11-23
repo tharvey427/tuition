@@ -1,8 +1,8 @@
-import { GradeService } from './../../services/grade.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { Grade } from 'src/app/classes/grade';
 import { MatSort, Sort } from '@angular/material/sort';
+import { GradeService } from 'src/app/services/grade.service';
 
 @Component({
   selector: 'app-grade',

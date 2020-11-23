@@ -19,14 +19,11 @@ export class ClaimDetailComponent implements OnInit {
 
   ngOnInit(): void {
     const claimId = this.route.snapshot.paramMap.get('id');
-    console.log(claimId);
     this.claim$ = this.claimService.getClaim(claimId);
-    console.log(this.claim$);
   }
 
   goToClaims(claim: Claim) {
     const claimId = claim ? claim.claimId : null;
-    console.log(claimId);
     // pass along claim id if one is available, if not set to null
     this.router.navigate(['/claims', { id: claimId }]);
   }

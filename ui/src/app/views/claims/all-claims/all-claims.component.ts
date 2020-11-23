@@ -23,10 +23,7 @@ export class AllClaimsComponent implements OnInit {
   constructor(private claimService: ClaimService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    // this.claimService.getAllClaims().subscribe((data: Claim[]) => {
-    //   this.claims = data;
-    // });
-
+    console.log('here');
     this.claims$ = this.route.paramMap.pipe(
       switchMap(params => {
         this.selectedId = +params.get('id');
@@ -38,8 +35,5 @@ export class AllClaimsComponent implements OnInit {
 
   onSelect(claim: Claim, id: number): void {
     this.selectedClaim = claim;
-    // this.selectedClaim.claimId = id; // this line caused above not to work
-    // this.router.navigate(['claims', id]);
-    console.log(this.selectedClaim);
   }
 }

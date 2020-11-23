@@ -1,3 +1,15 @@
-mat-sidenav-content {
-  min-height: 36.5em;
+.main {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
+
+.sidebar-container {
+  flex: 1;
+}
+
+// settings above make page responsive and full screen

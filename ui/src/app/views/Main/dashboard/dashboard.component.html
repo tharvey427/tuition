@@ -1,26 +1,21 @@
-<div fxFlex>
+<div class="main">
   <app-navbar [sidebar]="sidebar"></app-navbar>
-  <!-- [sidebar] above is the same property/name as @Input sidebar: MatSidenav in navbar ts -->
-  <mat-sidenav-container>
-    <mat-sidenav #sidebar opened mode="side">
-      <div>
-        <mat-nav-list>
-          <a mat-list-item [routerLink]="['claims']">Claims</a>
-        </mat-nav-list>
-        <mat-nav-list>
-          <a mat-list-item [routerLink]="['grades']">Grades</a>
-        </mat-nav-list>
-      </div>
 
+  <mat-sidenav-container class="sidebar-container">
+    <mat-sidenav #sidebar opened mode="side">
+      <mat-nav-list>
+        <!-- <a mat-list-item routerLink="/claims">Claims</a> -->
+        <a mat-list-item [routerLink]="['claims']">Claims</a>
+      </mat-nav-list>
+      <mat-nav-list>
+        <a mat-list-item [routerLink]="['grades']">Grades</a>
+      </mat-nav-list>
     </mat-sidenav>
 
     <mat-sidenav-content>
-      <!-- button below toggles sidebar -->
-      <!-- <button mat-button (click)="sidebar.toggle()">Main Content</button> -->
-
-      <!-- router outlet below will display page content from url in router -->
       <!-- The routed views render in the <router-outlet>-->
       <router-outlet></router-outlet>
     </mat-sidenav-content>
+    <footer></footer>
   </mat-sidenav-container>
 </div>
