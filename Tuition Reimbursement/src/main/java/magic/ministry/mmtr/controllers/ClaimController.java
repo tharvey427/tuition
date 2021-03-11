@@ -7,6 +7,7 @@ import magic.ministry.mmtr.services.ClaimService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Set;
 
@@ -15,10 +16,10 @@ import java.util.Set;
 @RequestMapping(path = "/claims")
 public class ClaimController {
 
-    @Autowired
+    @Resource
     ClaimService cs;
 
-    @Autowired
+    @Resource
     ClaimRepository cr;
 
     @GetMapping()

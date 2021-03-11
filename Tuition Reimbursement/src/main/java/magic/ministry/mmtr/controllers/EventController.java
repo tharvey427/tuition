@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import java.util.Set;
 
 @RestController
@@ -15,7 +16,7 @@ import java.util.Set;
 @RequestMapping(path = "/events")
 public class EventController {
 
-    @Autowired
+    @Resource
     EventService es;
 
     @GetMapping()

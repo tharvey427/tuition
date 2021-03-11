@@ -9,16 +9,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
+
 @RestController
 @CrossOrigin(origins="http://localhost:4200", allowCredentials = "true")
 //@CrossOrigin(origins = "*", allowCredentials = "true")
 @RequestMapping(path = "/login")
 public class LoginController {
 
-    @Autowired
+    @Resource
     EmployeeService es;
 
-    @Autowired
+    @Resource
     EmployeeRepository er;
 
     @PostMapping()

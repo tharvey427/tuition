@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Set;
 
@@ -16,10 +17,10 @@ import java.util.Set;
 @RequestMapping(path = "/employees")
 public class EmployeeController {
 
-    @Autowired
+    @Resource
     private EmployeeService employeeService;
 
-    @Autowired
+    @Resource
     private EmployeeRepository er;
 
     @GetMapping()
