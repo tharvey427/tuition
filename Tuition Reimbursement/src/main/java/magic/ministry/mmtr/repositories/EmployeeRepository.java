@@ -12,7 +12,7 @@ import java.util.Set;
 
 @Repository
 public interface EmployeeRepository extends CrudRepository<Employee, Integer> {
-// adding new employee only worked with Crud repository, not JPA!!!
+// adding new employee crud > jpa
     Employee findByUsername (String username);
 
     Employee findByUsernameAndPassword (String username, String password);
@@ -21,10 +21,10 @@ public interface EmployeeRepository extends CrudRepository<Employee, Integer> {
 
     Set<Employee> findBySupervisor(Employee supervisor);
 
-    //apparently needs a primitive int and object integer can't be used
+    //primitive int, not object
     Employee findById(int id);
 
-    //not sure if this one should be here
+    //debating
     Employee deleteById(int id);
 
     List<Claim> findEmployeeByEmployeeId(int id);

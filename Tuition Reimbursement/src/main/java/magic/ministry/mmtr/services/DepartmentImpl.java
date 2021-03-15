@@ -5,13 +5,14 @@ import magic.ministry.mmtr.repositories.DepartmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.HashSet;
 import java.util.Set;
 
 @Service
 public class DepartmentImpl implements DepartmentService {
 
-    @Autowired
+    @Resource
     DepartmentRepository dr;
 
     @Override

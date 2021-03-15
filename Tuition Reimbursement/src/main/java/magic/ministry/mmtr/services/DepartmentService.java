@@ -6,5 +6,5 @@ import java.util.Set;
 
 public interface DepartmentService {
 
-    public Set<Department> getAllDepartments();
+    Set<Department> getAllDepartments();
 }

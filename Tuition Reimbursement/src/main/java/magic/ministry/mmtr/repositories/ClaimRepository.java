@@ -14,7 +14,7 @@ public interface ClaimRepository extends CrudRepository<Claim, Integer> {
 
     Claim findByClaimId(int id);
 
-    // correctly is able to find all claims by one employee
+    // find all claims by one employee
     // accesses the employee id in employee object
     List<Claim> findByEmployee(Employee employee);
 

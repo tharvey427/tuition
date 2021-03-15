@@ -9,19 +9,19 @@ import java.util.Set;
 
 public interface EmployeeService {
 
-    public Employee newEmployee(Employee employee);
+    Employee newEmployee(Employee employee);
 
-    public Employee login(String username, String password);
+    Employee login(String username, String password);
 
-    public Employee findEmployeeById(int id);
+    Employee findEmployeeById(int id);
 
-    public Employee updateEmployee(Employee employee);
+    Employee updateEmployee(Employee employee);
 
-    public Set<Employee> getAllEmployees();
+    Set<Employee> getAllEmployees();
 
-    public Map<Department, Integer> getEmployeesByDepartment(Department department);
+    Map<Department, Integer> getEmployeesByDepartment(Department department);
 
-    public Map<Employee, Integer> getEmployeesBySupervisor(Set<Employee> supervisor);
+    Map<Employee, Integer> getEmployeesBySupervisor(Set<Employee> supervisor);
 
-    public void removeEmployee(Employee employee);
+    void removeEmployee(Employee employee);
 }

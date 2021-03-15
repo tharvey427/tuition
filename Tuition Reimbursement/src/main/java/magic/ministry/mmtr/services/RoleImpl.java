@@ -5,13 +5,14 @@ import magic.ministry.mmtr.repositories.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.HashSet;
 import java.util.Set;
 
 @Service
 public class RoleImpl implements RoleService {
 
-    @Autowired
+    @Resource
     public RoleRepository rr;
 
     @Override

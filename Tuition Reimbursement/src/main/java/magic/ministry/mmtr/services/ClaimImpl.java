@@ -7,15 +7,16 @@ import magic.ministry.mmtr.repositories.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.*;
 
 @Service
 public class ClaimImpl implements ClaimService {
 
-    @Autowired
+    @Resource
     ClaimRepository cr;
 
-    @Autowired
+    @Resource
     EmployeeRepository er;
 
     @Override

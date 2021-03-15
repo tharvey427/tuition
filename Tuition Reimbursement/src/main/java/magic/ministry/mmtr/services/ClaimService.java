@@ -8,11 +8,11 @@ import java.util.Set;
 
 public interface ClaimService {
 
-    public Set<Claim> getAllClaims();
+    Set<Claim> getAllClaims();
 
-    public Claim addClaim(Claim claim);
+    Claim addClaim(Claim claim);
 
-    public Claim updateClaim(Claim claim);
+    Claim updateClaim(Claim claim);
 
-    public List<Claim> findClaimByEmployee(Employee employee);
+    List<Claim> findClaimByEmployee(Employee employee);
 }

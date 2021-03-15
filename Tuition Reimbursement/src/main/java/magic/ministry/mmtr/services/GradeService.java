@@ -6,5 +6,5 @@ import java.util.Set;
 
 public interface GradeService {
 
-    public Set<Grade> getAllGrades();
+    Set<Grade> getAllGrades();
 }

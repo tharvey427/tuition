@@ -6,5 +6,5 @@ import java.util.Set;
 
 public interface EventService {
 
-    public Set<Event> getAllEvents();
+    Set<Event> getAllEvents();
 }

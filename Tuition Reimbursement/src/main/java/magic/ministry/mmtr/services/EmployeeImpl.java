@@ -6,12 +6,13 @@ import magic.ministry.mmtr.repositories.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.*;
 
 @Service
 public class EmployeeImpl implements EmployeeService {
 
-    @Autowired
+    @Resource
     EmployeeRepository er;
 
     @Override
@@ -39,7 +40,7 @@ public class EmployeeImpl implements EmployeeService {
     public Set<Employee> getAllEmployees() {
         Set<Employee> employees= new HashSet<>();
         er.findAll().forEach(employees::add);
-        // apparently the for each part is what actually adds each employee to set, needed
+        // for each adds each employee to set, nec
         return employees;
     }
 
